@@ -1,0 +1,331 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open\tCtrl+O",               IDM_FILE_OPEN
+        MENUITEM "Close",                       IDM_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild\tCtrl+R",             IDM_FILE_REBUILD
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               IDM_FILE_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Controls\tCtrl+C",            IDM_VIEW_CONTROLS
+        MENUITEM "Show Frames\tCtrl+F",         IDM_VIEW_SHOWFRAMES
+        MENUITEM SEPARATOR
+        MENUITEM "Options\tO",                  IDM_VIEW_OPTIONS
+    END
+    POPUP "&Playback"
+    BEGIN
+        MENUITEM "Play/Pause\tSpace",           IDM_PLAYBACK_PLAY
+        MENUITEM "Stop\tPeriod",                IDM_PLAYBACK_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "Enable Sound\tCtrl+S",        IDM_PLAYBACK_SOUND
+        MENUITEM SEPARATOR
+        MENUITEM "Make Snapshot\tF8",           IDM_PLAYBACK_MAKESNAPSHOT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About...",                    IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MENU                BITMAP                  "res\\menu.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\toolbar.bmp"
+IDB_BACKGROUND          BITMAP                  "res\\back.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 162, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "About gpuPlayer..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,55,92,50,14
+    CTEXT           "gpuPlayer",IDC_TITLE,7,17,148,15,SS_CENTERIMAGE
+    CTEXT           "# version #",IDC_VERSION,7,39,148,10,SS_CENTERIMAGE
+    CTEXT           "# build #",IDC_BUILD,7,52,148,10,SS_CENTERIMAGE
+    CTEXT           "Copyright © 2003. Darko Matesic",IDC_COPYRIGHT,7,71,148,
+                    10,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,7,3,148,84
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 224, 241
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",0x0,7,7,209,209
+    DEFPUSHBUTTON   "OK",IDOK,110,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,166,220,50,14
+END
+
+IDD_OPTIONS_PLAYBACK DIALOGEX 0, 0, 200, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Video Plugin",IDC_STATIC,5,5,190,59
+    COMBOBOX        IDC_GPU_PLUGIN,20,20,160,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Test",IDC_GPU_TEST,20,40,50,14
+    PUSHBUTTON      "Config",IDC_GPU_CONFIG,75,40,50,14
+    PUSHBUTTON      "About",IDC_GPU_ABOUT,130,40,50,14
+    GROUPBOX        "Sound Plugin",IDC_STATIC,5,65,190,74
+    COMBOBOX        IDC_SPU_PLUGIN,20,80,160,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Test",IDC_SPU_TEST,20,100,50,14
+    PUSHBUTTON      "Config",IDC_SPU_CONFIG,75,100,50,14
+    PUSHBUTTON      "About",IDC_SPU_ABOUT,130,100,50,14
+    CONTROL         "Enable Sound Playback",IDC_SOUND_ENABLED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,30,120,100,10
+    GROUPBOX        "Info Display",IDC_STATIC,5,140,85,45
+    CONTROL         "Show Frames",IDC_SHOW_FRAMES,"Button",
+                    BS_AUTORADIOBUTTON,20,155,60,10
+    CONTROL         "Show Time",IDC_SHOW_TIME,"Button",BS_AUTORADIOBUTTON,20,
+                    169,60,10
+    GROUPBOX        "Playback",IDC_STATIC,95,140,100,45
+    CONTROL         "Replay when done",IDC_REPLAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,105,160,80,10
+END
+
+IDD_REBUILD DIALOGEX 0, 0, 404, 167
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Rebuild"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,390,55
+    RTEXT           "Source File:",IDC_STATIC,20,20,55,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SOURCE_FILE,80,20,245,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "Browse...",IDC_SOURCE_BROWSE,335,20,50,12
+    RTEXT           "Destination File:",IDC_STATIC,19,40,55,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_DESTINATION_FILE,80,40,245,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "Browse...",IDC_DESTINATION_BROWSE,335,40,50,12
+    GROUPBOX        "Source File Information",IDC_STATIC,7,65,185,95
+    RTEXT           "File version:",IDC_STATIC,20,80,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_VERSION,90,80,95,10,SS_CENTERIMAGE
+    RTEXT           "Compression:",IDC_STATIC,20,90,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_COMPRESSION,90,90,95,10,SS_CENTERIMAGE
+    RTEXT           "Frames:",IDC_STATIC,20,100,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_FRAMES,90,100,95,10,SS_CENTERIMAGE
+    RTEXT           "FPS:",IDC_STATIC,20,110,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_FPS,90,110,95,10,SS_CENTERIMAGE
+    RTEXT           "Video Data Size:",IDC_STATIC,20,120,60,10,
+                    SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_VIDEO,90,120,95,10,SS_CENTERIMAGE
+    RTEXT           "Sound Data Size:",IDC_STATIC,20,130,60,10,
+                    SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_SOUND,90,130,95,10,SS_CENTERIMAGE
+    RTEXT           "Compressed:",IDC_STATIC,20,140,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_COMPRESSED,90,140,95,10,SS_CENTERIMAGE
+    GROUPBOX        "Destination File Settings",IDC_STATIC,200,65,197,65
+    RTEXT           "Compression:",IDC_STATIC,210,80,50,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMPRESSION,270,80,80,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Block Size:",IDC_STATIC,210,95,50,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_BLOCK_SIZE,270,95,80,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Rebuild Sound Data",IDC_REBUILD_SOUND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,220,110,80,12
+    DEFPUSHBUTTON   "Start",IDOK,290,146,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,347,146,50,14
+END
+
+IDD_REBUILD_PROGRESS DIALOGEX 0, 0, 214, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Rebuilding..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,200,130
+    RTEXT           "Compression:",IDC_STATIC,30,20,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_COMPRESSION,100,20,95,10,SS_CENTERIMAGE
+    RTEXT           "Frames:",IDC_STATIC,30,31,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_FRAMES,100,31,95,10,SS_CENTERIMAGE
+    RTEXT           "FPS:",IDC_STATIC,30,40,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_FPS,100,40,95,10,SS_CENTERIMAGE
+    RTEXT           "Video Data Size:",IDC_STATIC,30,50,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_VIDEO,100,50,95,10,SS_CENTERIMAGE
+    RTEXT           "Sound Data Size:",IDC_STATIC,30,60,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_SOUND,100,60,95,10,SS_CENTERIMAGE
+    RTEXT           "Compressed:",IDC_STATIC,30,71,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_INFO_COMPRESSED,100,71,95,10,SS_CENTERIMAGE
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,15,90,185,
+                    14
+    PUSHBUTTON      "Abort",IDCANCEL,82,145,50,14
+    RTEXT           "Elapsed Time:",IDC_STATIC,30,110,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_ELAPSED_TIME,100,110,95,10,SS_CENTERIMAGE
+    RTEXT           "Remaining Time:",IDC_STATIC,30,120,60,10,SS_CENTERIMAGE
+    LTEXT           "-",IDC_REMAINING_TIME,100,120,95,10,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "res\\gpuPlayer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_OPTIONS_PLAYBACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 195
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 185
+    END
+
+    IDD_REBUILD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 397
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_REBUILD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "res\\manifest.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR ACCELERATORS 
+BEGIN
+    "O",            IDM_FILE_OPEN,          VIRTKEY, CONTROL, NOINVERT
+    "R",            IDM_FILE_REBUILD,       VIRTKEY, CONTROL, NOINVERT
+    VK_F8,          IDM_PLAYBACK_MAKESNAPSHOT, VIRTKEY, NOINVERT
+    VK_SPACE,       IDM_PLAYBACK_PLAY,      VIRTKEY, NOINVERT
+    VK_OEM_PERIOD,  IDM_PLAYBACK_STOP,      VIRTKEY, NOINVERT
+    "C",            IDM_VIEW_CONTROLS,      VIRTKEY, CONTROL, NOINVERT
+    "O",            IDM_VIEW_OPTIONS,       VIRTKEY, NOINVERT
+    "F",            IDM_VIEW_SHOWFRAMES,    VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_PLAYBACK_SOUND,     VIRTKEY, CONTROL, NOINVERT
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
