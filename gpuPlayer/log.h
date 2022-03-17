@@ -23,26 +23,26 @@
 		void GPULogAppend(const char *, ...);
 		void GPULogEnd();
 	#else
-		#define GPULogStart()
-		#define GPULogAppend()
-		#define GPULogEnd()
+		#define GPULogStart(...) do { } while(0)
+		#define GPULogAppend(...) do { } while(0)
+		#define GPULogEnd(...) do { } while(0)
 	#endif
 	#ifdef SPU_LOG_ENABLED
 		void SPULogStart();
 		void SPULogAppend(const char *, ...);
 		void SPULogEnd();
 	#else
-		#define SPULogStart()
-		#define SPULogAppend()
-		#define SPULogEnd()
+		#define SPULogStart(...) do { } while(0)
+		#define SPULogAppend(...) do { } while(0)
+		#define SPULogEnd(...) do { } while(0)
 	#endif
 #else
-	#define GPULogStart()
-	#define GPULogAppend()
-	#define GPULogEnd()
-	#define SPULogStart()
-	#define SPULogAppend()
-	#define SPULogEnd()
+	#define GPULogStart(...) do { } while(0)
+	#define GPULogAppend(...) do { } while(0)
+	#define GPULogEnd(...) do { } while(0)
+	#define SPULogStart(...) do { } while(0)
+	#define SPULogAppend(...) do { } while(0)
+	#define SPULogEnd(...) do { } while(0)
 #endif
 
 #endif

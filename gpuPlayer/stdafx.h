@@ -27,10 +27,18 @@
 #include <tchar.h>
 #include <stdio.h>
 #include <direct.h>
-#include <sys\stat.h>
+#include <sys/stat.h>
 #include <fcntl.h>
 #include <io.h>
 #include "resource.h"
+
+#ifndef max
+#define max(a,b) (((a) > (b)) ? (a) : (b))
+#endif
+
+#ifndef min
+#define min(a,b) (((a) < (b)) ? (a) : (b))
+#endif
 
 /****** StdAfx functions *****************************************/
 

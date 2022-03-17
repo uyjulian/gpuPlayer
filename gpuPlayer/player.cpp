@@ -12,8 +12,8 @@
 #include "log.h"
 
 #define BZ_NO_STDIO
-#include "zlib/zlib.h"
-#include "bzip/bzlib.h"
+#include "zlib.h"
+#include "bzlib.h"
 
 DWORD Player_State = STATE_STOPPED;
 DWORD Player_SeekingPossible = 0;

@@ -91,9 +91,9 @@ END
 // Bitmap
 //
 
-IDB_MENU                BITMAP                  "res\\menu.bmp"
-IDB_TOOLBAR             BITMAP                  "res\\toolbar.bmp"
-IDB_BACKGROUND          BITMAP                  "res\\back.bmp"
+IDB_MENU                BITMAP                  "res/menu.bmp"
+IDB_TOOLBAR             BITMAP                  "res/toolbar.bmp"
+IDB_BACKGROUND          BITMAP                  "res/back.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -236,7 +236,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_ICON                ICON                    "res\\gpuPlayer.ico"
+IDI_ICON                ICON                    "res/gpuPlayer.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -294,7 +294,7 @@ END
 // RT_MANIFEST
 //
 
-IDR_MANIFEST            RT_MANIFEST             "res\\manifest.xml"
+IDR_MANIFEST            RT_MANIFEST             "res/manifest.xml"
 
 /////////////////////////////////////////////////////////////////////////////
 //

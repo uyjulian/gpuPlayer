@@ -13,8 +13,8 @@
 #include "player.h"
 
 #define BZ_NO_STDIO
-#include "zlib/zlib.h"
-#include "bzip/bzlib.h"
+#include "zlib.h"
+#include "bzlib.h"
 
 typedef struct tagCompressionType {
 	CHAR Name[MAX_PATH];
